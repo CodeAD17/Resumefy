@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -12,6 +12,9 @@ export default {
           500: '#0096FF',
           600: '#0077CC',
         },
+      },
+      fontFamily: {
+        mulish: ['Mulish', 'sans-serif'],
       },
     },
   },
