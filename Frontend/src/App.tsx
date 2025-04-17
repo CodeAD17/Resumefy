@@ -3,12 +3,12 @@ import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { SignupPage } from './components/SignupPage';
 import { Dashboard } from './components/Dashboard';
-import { ResumeBuilderPage } from './pages/ResumeBuilderPage';
-import { EducationPage } from './pages/EducationPage';
-import { SkillsPage } from './pages/SkillsPage';
-import { ProjectsPage } from './pages/ProjectsPage';
-import { ExperiencePage } from './pages/ExperiencePage';
-import { DownloadResumePage } from './pages/DownloadResumePage';
+import { ResumeBuilderPage } from './CreateResumepages/ResumeBuilderPage';
+import { EducationPage } from './CreateResumepages/EducationPage';
+import { SkillsPage } from './CreateResumepages/SkillsPage';
+import { ProjectsPage } from './CreateResumepages/ProjectsPage';
+import { ExperiencePage } from './CreateResumepages/ExperiencePage';
+import { DownloadResumePage } from './CreateResumepages/DownloadResumePage';
 import './styles/globals.css';
 
 function App() {
