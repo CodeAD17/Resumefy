@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import '../styles/globals.css';
 import { JobModal } from './JobModal';
+import { ResumeCreationModal } from './ResumeCreationModal';
 
 export const Dashboard: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isJobModalOpen, setIsJobModalOpen] = useState(false);
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState<{ title: string } | null>(null);
 
   const jobOpenings = [
@@ -77,7 +79,10 @@ export const Dashboard: React.FC = () => {
               </svg>
               <span>Check ATS Of Your Uploaded Resume</span>
             </button>
-            <button className="w-full text-left py-3 px-6 hover:bg-white/10 rounded-xl transition-colors duration-200 flex items-center space-x-3 font-medium">
+            <button 
+              onClick={() => setIsResumeModalOpen(true)} 
+              className="w-full text-left py-3 px-6 hover:bg-white/10 rounded-xl transition-colors duration-200 flex items-center space-x-3 font-medium"
+            >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
               </svg>
@@ -208,6 +213,12 @@ export const Dashboard: React.FC = () => {
           jobTitle={selectedJob.title}
         />
       )}
+
+      {/* Resume Creation Modal */}
+      <ResumeCreationModal
+        isOpen={isResumeModalOpen}
+        onClose={() => setIsResumeModalOpen(false)}
+      />
     </div>
   );
 }; 

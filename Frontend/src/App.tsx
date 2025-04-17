@@ -3,6 +3,12 @@ import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { SignupPage } from './components/SignupPage';
 import { Dashboard } from './components/Dashboard';
+import { ResumeBuilderPage } from './pages/ResumeBuilderPage';
+import { EducationPage } from './pages/EducationPage';
+import { SkillsPage } from './pages/SkillsPage';
+import { ProjectsPage } from './pages/ProjectsPage';
+import { ExperiencePage } from './pages/ExperiencePage';
+import { DownloadResumePage } from './pages/DownloadResumePage';
 import './styles/globals.css';
 
 function App() {
@@ -25,6 +31,12 @@ function App() {
         } />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/resume-builder" element={<ResumeBuilderPage />} />
+        <Route path="/resume-builder/education" element={<EducationPage />} />
+        <Route path="/resume-builder/skills" element={<SkillsPage />} />
+        <Route path="/resume-builder/projects" element={<ProjectsPage />} />
+        <Route path="/resume-builder/experience" element={<ExperiencePage />} />
+        <Route path="/resume-builder/download" element={<DownloadResumePage />} />
       </Routes>
     </Router>
   );
