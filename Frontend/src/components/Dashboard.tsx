@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import '../styles/globals.css';
-import JobModal from './JobModal';
-import { ATSCheckerModal } from './ATSCheckerModal';
+import { JobModal } from './JobModal';
 import { ResumeCreationModal } from './ResumeCreationModal';
-
 
 export const Dashboard: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isJobModalOpen, setIsJobModalOpen] = useState(false);
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
-  const [isATSCheckerModalOpen, setIsATSCheckerModalOpen] = useState(false); // State for ATSCheckerModal
   const [selectedJob, setSelectedJob] = useState<{ title: string } | null>(null);
 
   const jobOpenings = [
@@ -76,17 +73,14 @@ export const Dashboard: React.FC = () => {
 
           {/* Navigation */}
           <nav className="flex-1 space-y-6">
-            <button
-              onClick={() => setIsATSCheckerModalOpen(true)} // Open ATSCheckerModal
-              className="w-full text-left py-3 px-6 hover:bg-white/10 rounded-xl transition-colors duration-200 flex items-center space-x-3 font-medium"
-            >
+            <button className="w-full text-left py-3 px-6 hover:bg-white/10 rounded-xl transition-colors duration-200 flex items-center space-x-3 font-medium">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-              <span>Create ATS Friendly Resume</span>
+              <span>Check ATS Of Your Uploaded Resume</span>
             </button>
-            <button
-              onClick={() => setIsResumeModalOpen(true)}
+            <button 
+              onClick={() => setIsResumeModalOpen(true)} 
               className="w-full text-left py-3 px-6 hover:bg-white/10 rounded-xl transition-colors duration-200 flex items-center space-x-3 font-medium"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -125,13 +119,10 @@ export const Dashboard: React.FC = () => {
           <div className="flex-1 bg-white rounded-[50px] shadow-lg p-8 flex flex-col">
             {/* Header */}
             <header className="flex flex-col lg:flex-row justify-between items-center gap-6 mb-8">
-              
-                <h1 className="text-3xl font-bold tracking-tight">
-                  <span className="text-black">Resumify</span>
-                  <span className="text-[#00A3FF]">.AI</span>
-                </h1> 
-
-              
+              <h1 className="text-3xl font-bold tracking-tight">
+                <span className="text-black">Resumify</span>
+                <span className="text-[#00A3FF]">.AI</span>
+              </h1>
               <div className="relative w-full lg:w-auto">
                 <input
                   type="text"
@@ -164,7 +155,7 @@ export const Dashboard: React.FC = () => {
                         <p className="text-gray-600 font-medium">{job.description}</p>
                       </div>
                     </div>
-                    <button
+                    <button 
                       onClick={() => handleJobClick(job)}
                       className="bg-gradient-to-r from-[#0088FF] to-[#1144FF] text-white px-8 py-3 rounded-full hover:shadow-lg transition-all duration-200 flex items-center space-x-2 font-semibold"
                     >
@@ -227,10 +218,6 @@ export const Dashboard: React.FC = () => {
       <ResumeCreationModal
         isOpen={isResumeModalOpen}
         onClose={() => setIsResumeModalOpen(false)}
-      />
-      <ATSCheckerModal
-        isOpen={isATSCheckerModalOpen}
-        onClose={() => setIsATSCheckerModalOpen(false)}
       />
     </div>
   );
