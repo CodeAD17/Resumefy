@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/globals.css';
-import { JobModal } from './JobModal';
+import JobModal from './JobModal';
 import { ATSCheckerModal } from './ATSCheckerModal';
 import { ResumeCreationModal } from './ResumeCreationModal';
 
