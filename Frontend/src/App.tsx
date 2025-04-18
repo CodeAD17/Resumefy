@@ -10,6 +10,7 @@ import { ProjectsPage } from './CreateResumepages/ProjectsPage';
 import { ExperiencePage } from './CreateResumepages/ExperiencePage';
 import { DownloadResumePage } from './CreateResumepages/DownloadResumePage';
 import { ATSCheckerModal } from './components/ATSCheckerModal';
+import HRDashboard from './components/HRDashboard'
 import './styles/globals.css';
 
 function App() {
@@ -41,7 +42,7 @@ function App() {
         <Route path="/resume-builder/projects" element={<ProjectsPage />} />
         <Route path="/resume-builder/experience" element={<ExperiencePage />} />
         <Route path="/resume-builder/download" element={<DownloadResumePage />} />
-
+        <Route path="/hr-dashboard" element={<HRDashboard />} />  
         {/* ATS Checker Route */}
         <Route
           path="/ats-checker"

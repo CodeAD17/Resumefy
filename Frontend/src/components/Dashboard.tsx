@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import '../styles/globals.css';
 import { JobModal } from './JobModal';
-import { ResumeCreationModal } from './ResumeCreationModal';
 import { ATSCheckerModal } from './ATSCheckerModal';
+import { ResumeCreationModal } from './ResumeCreationModal';
+
 
 export const Dashboard: React.FC = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);

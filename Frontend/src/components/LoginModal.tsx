@@ -15,6 +15,11 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
     navigate('/signup'); // Navigate to signup page
   };
 
+  const handleHRClick = () => {
+    onClose(); // Close login modal
+    navigate('/hr-dashboard'); // Navigate to HRDashboard
+  };
+
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <div className="text-center">
@@ -48,7 +53,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
               />
             </div>
             <button
-              onClick={() => {/* Handle HR login */}}
+              onClick={handleHRClick} // Navigate to HRDashboard
               className="w-full bg-[#F5A623] text-white px-4 py-2 rounded-full hover:bg-[#E69512] transition-colors duration-200"
             >
               Login as HR
@@ -58,4 +63,4 @@ export const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
       </div>
     </Modal>
   );
-}; 
+};
