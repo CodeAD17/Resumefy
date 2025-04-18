@@ -76,7 +76,7 @@ export const Dashboard: React.FC = () => {
 
           {/* Navigation */}
           <nav className="flex-1 space-y-6">
-          <button 
+            <button
               onClick={() => setIsATSCheckerModalOpen(true)} // Open ATSCheckerModal
               className="w-full text-left py-3 px-6 hover:bg-white/10 rounded-xl transition-colors duration-200 flex items-center space-x-3 font-medium"
             >
@@ -85,8 +85,8 @@ export const Dashboard: React.FC = () => {
               </svg>
               <span>Create ATS Friendly Resume</span>
             </button>
-            <button 
-              onClick={() => setIsResumeModalOpen(true)} 
+            <button
+              onClick={() => setIsResumeModalOpen(true)}
               className="w-full text-left py-3 px-6 hover:bg-white/10 rounded-xl transition-colors duration-200 flex items-center space-x-3 font-medium"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -125,10 +125,13 @@ export const Dashboard: React.FC = () => {
           <div className="flex-1 bg-white rounded-[50px] shadow-lg p-8 flex flex-col">
             {/* Header */}
             <header className="flex flex-col lg:flex-row justify-between items-center gap-6 mb-8">
-              <h1 className="text-3xl font-bold tracking-tight">
-                <span className="text-black">Resumify</span>
-                <span className="text-[#00A3FF]">.AI</span>
-              </h1>
+              
+                <h1 className="text-3xl font-bold tracking-tight">
+                  <span className="text-black">Resumify</span>
+                  <span className="text-[#00A3FF]">.AI</span>
+                </h1> 
+
+              
               <div className="relative w-full lg:w-auto">
                 <input
                   type="text"
@@ -161,7 +164,7 @@ export const Dashboard: React.FC = () => {
                         <p className="text-gray-600 font-medium">{job.description}</p>
                       </div>
                     </div>
-                    <button 
+                    <button
                       onClick={() => handleJobClick(job)}
                       className="bg-gradient-to-r from-[#0088FF] to-[#1144FF] text-white px-8 py-3 rounded-full hover:shadow-lg transition-all duration-200 flex items-center space-x-2 font-semibold"
                     >
